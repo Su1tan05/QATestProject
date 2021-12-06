@@ -1,4 +1,4 @@
-package Tests.Utils;
+package Project.Utils;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -6,8 +6,8 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    private static final String configFilePath= "src/test/java/Tests/Resources/Configuration.properties";
-    private static final String testDataFilePath= "src/test/java/Tests/Resources/TestData.properties";
+    private static final String configFilePath= "src/test/java/Project/Resources/Configuration..properties";
+    private static final String testDataFilePath= "src/test/java/Project/Resources/TestData..properties";
 
     public static String getProperty(String key) {
         Properties prop = new Properties();

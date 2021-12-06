@@ -1,0 +1,31 @@
+package Project.BrowserConfig;
+
+import Project.Utils.ConfigReader;
+import Project.Utils.LogUtils;
+import org.openqa.selenium.WebDriver;
+import java.util.concurrent.TimeUnit;
+
+public class Browser {
+
+    private static WebDriver driver;
+
+    private Browser() {
+    }
+
+    public static WebDriver getDriver()  {
+        if (driver == null) {
+            driver = BrowserFactory.getBrowser(ConfigReader.getProperty("browser"));
+        }
+        return driver;
+    }
+
+    public static void getUrl(String url)  {
+        LogUtils.info(String.format("Go to %s .", url));
+        Browser.getDriver().get(url);
+    }
+
+    public static void maximizeWindow()  {
+        LogUtils.info("Maximize window");
+        Browser.getDriver().manage().window().maximize();
+    }
+}

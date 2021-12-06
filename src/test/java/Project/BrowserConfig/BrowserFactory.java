@@ -1,7 +1,8 @@
-package Tests.BrowserConfig;
+package Project.BrowserConfig;
 
-import Tests.Utils.ConfigReader;
-import Tests.Utils.LogUtils;
+import Project.Exceptions.DriverError;
+import Project.Utils.ConfigReader;
+import Project.Utils.LogUtils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BrowserFactory {
 
-    public static WebDriver getBrowser(String browserName) throws Exception {
+    public static WebDriver getBrowser(String browserName)  {
         browserName = browserName.toLowerCase();
         String browserLanguage = ConfigReader.getProperty("lang");
         switch (browserName)
@@ -23,7 +24,7 @@ public class BrowserFactory {
             case "firefox":
                 return getFirefoxfInstance(browserLanguage);
             default:
-                throw new Exception("Input correct browser name! (Examples: Chrome, Firefox)");
+                throw new DriverError("Input correct browser name! (Examples: Chrome, Firefox)");
         }
     }
 

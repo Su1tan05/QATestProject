@@ -1,4 +1,4 @@
-package Tests.Utils;
+package Project.Utils;
 
 import org.apache.log4j.Logger;
 
