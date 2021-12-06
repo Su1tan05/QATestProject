@@ -7,7 +7,7 @@ import java.util.Properties;
 public class ConfigReader {
 
     private static final String configFilePath= "src/test/java/Project/Resources/Configuration..properties";
-    private static final String testDataFilePath= "src/test/java/Project/Resources/TestData..properties";
+    private static final String testDataFilePath= "src/test/java/Project/Resources/TestData.properties";
 
     public static String getProperty(String key) {
         Properties prop = new Properties();

@@ -3,7 +3,6 @@ package Project.BrowserConfig;
 import Project.Utils.ConfigReader;
 import Project.Utils.LogUtils;
 import org.openqa.selenium.WebDriver;
-import java.util.concurrent.TimeUnit;
 
 public class Browser {
 
@@ -19,7 +18,7 @@ public class Browser {
         return driver;
     }
 
-    public static void getUrl(String url)  {
+    public static void goToUrl(String url)  {
         LogUtils.info(String.format("Go to %s .", url));
         Browser.getDriver().get(url);
     }
