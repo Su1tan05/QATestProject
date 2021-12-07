@@ -1,6 +1,6 @@
-package Project.Utils;
+package project.utils;
 
-import Project.BrowserConfig.Browser;
+import project.browserConfig.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;

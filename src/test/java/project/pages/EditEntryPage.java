@@ -1,7 +1,7 @@
-package Project.Pages;
+package project.pages;
 
-import Project.Elements.Button;
-import Project.Elements.TextField;
+import project.elements.Button;
+import project.elements.TextField;
 
 public class EditEntryPage {
 

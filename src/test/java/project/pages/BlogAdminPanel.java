@@ -1,15 +1,11 @@
-package Project.Pages;
+package project.pages;
 
-import Project.Elements.Button;
+import project.elements.Button;
 
-public class BlogPage {
+public class BlogAdminPanel {
 
     private Button recordButton(String entryTitle){
         return new Button(String.format("//a[contains(text(),'%s')]",entryTitle),"recordButton");
-    }
-
-    public boolean isRecordAppear(String entryTitle){
-        return recordButton(entryTitle).isDisplayed();
     }
 
     public void clickRecordButton(String entryTitle){

@@ -1,8 +1,8 @@
-package Project.BrowserConfig;
+package project.browserConfig;
 
-import Project.Exceptions.DriverError;
-import Project.Utils.ConfigReader;
-import Project.Utils.LogUtils;
+import project.exceptions.DriverError;
+import project.utils.ConfigReader;
+import project.utils.LogUtils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,11 +1,11 @@
-package Project.Elements;
+package project.elements;
 
-import Project.BrowserConfig.Browser;
-import Project.Utils.LogUtils;
+import project.browserConfig.Browser;
+import project.utils.LogUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import Project.Utils.WaitUtils;
+import project.utils.WaitUtils;
 
 import java.util.ArrayList;
 

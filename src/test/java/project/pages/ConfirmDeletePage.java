@@ -1,6 +1,6 @@
-package Project.Pages;
+package project.pages;
 
-import Project.Elements.Button;
+import project.elements.Button;
 
 public class ConfirmDeletePage {
 

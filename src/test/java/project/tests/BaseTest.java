@@ -1,9 +1,9 @@
-package Project.Tests;
+package project.tests;
 
-import Project.BrowserConfig.Browser;
-import Project.Utils.ConfigReader;
+import project.browserConfig.Browser;
+import project.utils.ConfigReader;
 import org.junit.AfterClass;
-import Project.Utils.LogUtils;
+import project.utils.LogUtils;
 import org.junit.BeforeClass;
 import org.apache.log4j.PropertyConfigurator;
 

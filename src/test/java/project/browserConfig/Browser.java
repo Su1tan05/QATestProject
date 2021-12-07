@@ -1,7 +1,7 @@
-package Project.BrowserConfig;
+package project.browserConfig;
 
-import Project.Utils.ConfigReader;
-import Project.Utils.LogUtils;
+import project.utils.ConfigReader;
+import project.utils.LogUtils;
 import org.openqa.selenium.WebDriver;
 
 public class Browser {

@@ -1,6 +1,4 @@
-package Project.Elements;
-
-import org.openqa.selenium.By;
+package project.elements;
 
 public class Button extends BaseElement {
     public Button(String locator, String nameOfElement) {

@@ -1,16 +1,14 @@
-package Project.Tests;
+package project.tests;
 
-import Project.BrowserConfig.Browser;
-import Project.Pages.*;
-import Project.Utils.ConfigReader;
+import project.browserConfig.Browser;
+import project.pages.*;
+import project.utils.ConfigReader;
 import org.apache.commons.lang.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class DjangoTest extends BaseTest {
 
-    private final String entriesPagePath = ConfigReader.getProperty("entriesPagePath");
-    private final String blogPagePath = ConfigReader.getProperty("blogPagePath");
     private final int randomNumbersLength = 11;
     private final String randomNumber = RandomStringUtils.random(randomNumbersLength, false, true);
 
@@ -23,10 +21,8 @@ public class DjangoTest extends BaseTest {
         loginPage.clickLoginButton();
 
         HomePage homePage = new HomePage();
-        Assert.assertTrue("In a home page doesn't appear control panel",homePage.isControlPanelAppear());
-        Browser.goToUrl(ConfigReader.getProperty("url")+entriesPagePath);
-        EntryPage entryPage = new EntryPage();
-        entryPage.clickAddEntryButton();
+        Assert.assertTrue("In a home page doesn't appear control panel", homePage.isControlPanelAppear());
+        homePage.clickAddEntireButton();
         EditEntryPage editEntryPage = new EditEntryPage();
         Assert.assertTrue("Heading: 'Добавить entry' doesn't appear", editEntryPage.isHeadingAppear());
         editEntryPage.isHeadingAppear();
@@ -35,10 +31,12 @@ public class DjangoTest extends BaseTest {
         editEntryPage.inputTextMarkdown("Slug"+randomNumber);
         editEntryPage.inputText("Slug"+randomNumber);
         editEntryPage.clickSaveButton();
-        Browser.goToUrl(ConfigReader.getProperty("url")+blogPagePath);
+        Browser.goToUrl(ConfigReader.getProperty("blogPageUrl"));
         BlogPage blogPage = new BlogPage();
         Assert.assertTrue(String.format("Record: 'Title%s' doesn't appear", randomNumber), blogPage.isRecordAppear("Title"+randomNumber));
-        blogPage.clickRecordButton("Title"+randomNumber);
+        Browser.goToUrl(ConfigReader.getProperty("blogAdminPanelUrl"));
+        BlogAdminPanel blogAdminPanel = new BlogAdminPanel();
+        blogAdminPanel.clickRecordButton("Title"+randomNumber);
         editEntryPage.clickDeleteEntryButton();
         ConfirmDeletePage confirmDeletePage = new ConfirmDeletePage();
         confirmDeletePage.clickConfirmDeleteButton();
