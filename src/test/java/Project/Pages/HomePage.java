@@ -1,7 +1,6 @@
 package Project.Pages;
 
 import Project.Elements.Button;
-import Project.Elements.Label;
 
 public class HomePage {
 

@@ -1,20 +1,20 @@
 package Project.Pages;
 
 import Project.Elements.Button;
-import Project.Elements.Label;
+import Project.Elements.TextField;
 
 public class LoginPage {
 
-    private Label userName = new Label("//input[@name='username']","userName");
-    private Label password = new Label("//input[@name='password']", "password");
+    private TextField userNameTextField = new TextField("//input[@name='username']","userNameTextField");
+    private TextField passwordTextField = new TextField("//input[@name='password']", "passwordTextField");
     private Button loginButton = new Button("//input[@type='submit']","loginButton");
 
     public void inputLogin(String login) {
-        userName.sendKeys(login);
+        userNameTextField.sendKeys(login);
     }
 
     public void inputPassword(String pass){
-        password.sendKeys(pass);
+        passwordTextField.sendKeys(pass);
     }
 
     public void clickLoginButton()

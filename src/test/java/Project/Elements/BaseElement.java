@@ -39,6 +39,13 @@ public abstract class BaseElement {
     }
 
     public void sendKeys(String text) {
+        LogUtils.info(String.format("Input text '%s' into %s", text,  nameOfElement));
+        Browser.getDriver().findElement(locator).sendKeys(text);
+    }
+
+    public void clearAndType(String text) {
+        LogUtils.info(String.format("Input text '%s' into %s", text,  nameOfElement));
+        Browser.getDriver().findElement(locator).clear();
         Browser.getDriver().findElement(locator).sendKeys(text);
     }
 
