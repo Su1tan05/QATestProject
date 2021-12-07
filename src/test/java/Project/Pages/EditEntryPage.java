@@ -11,6 +11,7 @@ public class EditEntryPage {
     private final TextField textMarkdownTextField = new TextField("//textarea[contains(@name,'text_markdown')]","textMarkdownTextField");
     private final TextField textField = new TextField("//textarea[@name='text']","textField");
     private final Button saveButton = new Button("//input[contains(@name,'save')]","saveButton");
+    private final Button deleteEntryButton = new Button("//a[contains(@class,'deletelink')]","deleteEntryButton");
 
     public boolean isHeadingAppear(){
         return heading.isDisplayed();
@@ -34,5 +35,9 @@ public class EditEntryPage {
 
     public void clickSaveButton(){
         saveButton.click();
+    }
+
+    public void clickDeleteEntryButton(){
+        deleteEntryButton.click();
     }
 }

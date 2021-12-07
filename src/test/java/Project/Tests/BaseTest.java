@@ -20,6 +20,6 @@ public class BaseTest
     @AfterClass
     public static void doAfterAllTest(){
         LogUtils.info("Close browser");
-        //Browser.getDriver().quit();
+        Browser.getDriver().quit();
     }
 }
